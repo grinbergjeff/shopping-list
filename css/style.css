@@ -1,0 +1,41 @@
+<!-- Stylesheet by Jeffrey Grinberg -->
+
+.body {
+	background-color: black;
+	font-family: 'Playfair Display', serif;
+	-webkit-font-smoothing: antialiased;
+}
+/*Header Section*/
+.header {
+	height: 300px;
+	background-color: #CF4857;
+	font-family: 'Playfair Display', serif;
+}
+.header .header-info {
+	text-align: center;
+	padding-top: 10px;
+}
+.header .header-title {
+	font-family: 'Abril Fatface', cursive;
+	letter-spacing: 1.01px;
+	font-size: 40px;
+	color: whitesmoke;
+}
+.header .logo li {
+	display: inline-block;
+	text-align: center;
+	list-style-type: none;
+}
+.header h5 {
+	font-size: 13px;
+	color: white;
+}
+/*Middle Section*/
+.middle {
+	height: 500px;
+}
+/*Footer Section*/
+.footer {
+	height: 200px;
+	background-color: #CF4857;
+}
