@@ -2,24 +2,26 @@
 
 .body {
 	background-color: black;
-	font-family: 'Playfair Display', serif;
+	font-family: 'Open Sans', sans-serif;
 	-webkit-font-smoothing: antialiased;
 }
 /*Header Section*/
 .header {
-	height: 300px;
-	background-color: #CF4857;
-	font-family: 'Playfair Display', serif;
+	height: 270px;
+	background-color: #6991AC;
+	font-family: 'Open Sans', sans-serif;
 }
 .header .header-info {
 	text-align: center;
-	padding-top: 10px;
+	padding-top: 30px;
 }
 .header .header-title {
-	font-family: 'Abril Fatface', cursive;
+	font-family: 'Open Sans', sans-serif;
+	-webkit-font-smoothing: antialiased;
 	letter-spacing: 1.01px;
 	font-size: 40px;
-	color: whitesmoke;
+	font-weight: 400;
+	color: #F5F5F5;
 }
 .header .logo li {
 	display: inline-block;
@@ -28,14 +30,81 @@
 }
 .header h5 {
 	font-size: 13px;
-	color: white;
+	color: #F5F5F5;
 }
 /*Middle Section*/
 .middle {
-	height: 500px;
+	height: 600px;
+	background-color: #F5F5F5;
 }
+.middle #reset-button {
+	padding-top: 20px;
+	text-align: center;
+}
+.middle #reset-list {
+	width: 100px;
+	height: 30px;
+	border-radius: 9px;
+	border: 2px solid #D75C37;
+	background-color: #D75C37;
+	color: white;
+}
+.middle .add-item {
+	text-align: center;
+	padding-top: 30px;
+}
+.middle input {
+	width: 80%;
+	height: 30px;
+	text-align: center;
+	border-radius: 9px;
+	border: 2px solid #555252;
+	background-color: #555252;
+	color: white;
+}
+::-webkit-input-placeholder {
+   color: white;
+}
+:-moz-placeholder {
+   color: white;  
+}
+::-moz-placeholder {
+   color: white;  
+}
+:-ms-input-placeholder {  
+   color: white;  
+}
+.middle .list {
+	text-align: center;
+	padding-top: 15px;
+}
+.middle .list p {
+	display: inline-block;
+	text-align: center;
+	width: 80%;
+	height: 30px;
+	margin-top: 10px;
+	border-radius: 9px;
+	border: 2px solid #67727A;
+	background-color: #67727A;
+	line-height: 25pt;
+	color: white;
+}
+.strikethrough {
+	position: relative;
+	display: inline-block;
+}
+.strikethrough::after {
+	border-bottom: 3px solid white;
+	content: "";
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 45%;
+}
+
 /*Footer Section*/
 .footer {
 	height: 200px;
-	background-color: #CF4857;
+	background-color: #C3D7DF;
 }
