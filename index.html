@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Shopping List</title>
+	<title>Shopping List by Jeffrey Grinberg</title>
 	<!-- StyleSheet Section -->
 	<!-- My CSS -->
 		<link rel="stylesheet" href="css/style.css">
@@ -10,31 +10,35 @@
 		<link rel="stylesheet" href="css/normalize.css">
 		<!-- Font-Awesome 4.3.0 *THANK YOU!*-->
 		<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
-		<!-- Google Font -->
-		<link href='http://fonts.googleapis.com/css?family=Playfair+Display:400' rel='stylesheet' type='text/css'>
-		<!-- Another Google Font -->
-		<link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
+		<!--Google Font -->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 </head>
 <body>
 	<!-- Start Header Section -->
 	<section class = "header">
 		<div class= "header-info">
 			<h3 class= "header-title">Shopping List</h3>
-			<ul class= "logo">
-				<li>
-				<span class="fa stack fa-4x">
-				<i class="fa fa-list-ul fa-stack- fa-inverse"></i>
-				</span>
-				</li>
-			</ul>
 			<h5>Made by Jeffrey Grinberg</h5>
 		</div>
 	</section>
 	<!-- End of Header Section -->
 	<!-- Start Middle Section -->
-	<section class="body">
+	<section class="middle">
+		<div id="reset-button">
+		<button name="reset-list" id="reset-list">Reset</button>
+		</div>
+		<div class="add-item">
+			<input type="text" name="new-item" placeholder=" Add a new item here... then press enter"/>
+		</div>
 		<div class="list">
-			
+				<p>Item 1</p>
+				<p>Item 2</p>
+				<p>Item 3</p>
+				<p class="strikethrough">Item 4</p>
+				<p class="strikethrough">Item 5</p>
+		</div>
+		<div id="reset-button">
+			<button name="reset-list" id="reset-list">Reset</button>
 		</div>
 	</section>
 	<!-- End of Middle Section -->
