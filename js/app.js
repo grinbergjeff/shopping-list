@@ -21,7 +21,7 @@ $(document).ready(function() {
 	--> Develop the functionality of the X and Check button
 	on each side. 
 	
---- Incorporate full reset code ---
+*DONE* Incorporate full reset code *DONE*
 	When the #reset-button is clicked, (pressDown), the entire
 	list inside of the .list class will become empty.
 	
@@ -46,6 +46,7 @@ function newItem() {
 }
 function addItem() {
 	var itemnew = $('.new-item').val();
+	if (itemnew != '') {
 	$('.list').prepend('<p class="top-list">' + itemnew + '</p>');
 	$('.top-list').css({
 		"opacity": "0",
@@ -55,11 +56,17 @@ function addItem() {
 		marginTop: "10px",
 	}, {
 		duration: 'slow',
-		queue: false}).removeClass(); //Only new items fade in.
+		queue: false}).removeClass();} //Only new items fade in.
 }
 function reset() {
 	$('#reset-list').mousedown(function() {
-		alert('mousedown worked');
-		var confirmation = jconfirm('Are you sure you want to reset this list?');
+		//Consider jQuery.confirm
+		if(confirm('If you click OK, your list will reset')) {
+			$('.list').fadeOut("slow");
+			$('.list').empty().fadeIn("fast");
+		}
+		else {
+			jQuery.noop();
+		}
 	})
 }
