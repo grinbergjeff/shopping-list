@@ -35,14 +35,15 @@ function newItem() {
 	$('.new-item').keydown(function(ent) {
 		if (ent.which == 13) {
 			console.log('Enter key is hit!');
-			//Reset input field back to placeholder
-			$('.new-item').val('');
 			//Add new item to the list
 			addItem();
+			//Reset input field back to placeholder
+			$(this).val('');
+			
 		}
 	});
 }
 function addItem() {
 	var itemnew = $('.new-item').val();
-	$('.list').prepend('<p> itemnew </p>').fadeIn('slow');
+	$('.list').prepend('<p>' + itemnew + '</p>').fadeIn('slow');
 }
