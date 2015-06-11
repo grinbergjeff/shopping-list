@@ -36,6 +36,7 @@ function newItem() {
 		if (ent.which == 13) {
 			console.log('Enter key is hit!');
 			//Reset input field back to placeholder
+			$('.new-item').val('');
 			//Add new item to the list
 			addItem();
 		}
