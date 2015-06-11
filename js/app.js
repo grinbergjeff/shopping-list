@@ -62,8 +62,9 @@ function reset() {
 	$('#reset-list').mousedown(function() {
 		//Consider jQuery.confirm
 		if(confirm('If you click OK, your list will reset')) {
-			$('.list').fadeOut("slow");
+			$('.list').fadeOut("medium", function() {
 			$('.list').empty().fadeIn("fast");
+			});
 		}
 		else {
 			jQuery.noop();
