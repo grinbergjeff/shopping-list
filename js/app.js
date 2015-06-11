@@ -27,6 +27,8 @@ newItem();
 --- Consider incorporating menu on side ---
 	Research sidr.
 	
+--- Incorporate pushing the footer down as the list expands ---
+	
 */
 });
 function newItem() {
@@ -40,5 +42,5 @@ function newItem() {
 }
 function addItem() {
 	var itemnew = $('.new-item').val();
-	$('.list').prepend('<p> itemnew </p>');
+	$('.list').prepend('<p> itemnew </p>').fadeIn('slow');
 }
