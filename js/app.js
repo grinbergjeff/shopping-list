@@ -28,6 +28,8 @@ newItem();
 	Research sidr.
 	
 --- Incorporate pushing the footer down as the list expands ---
+
+--- Address item name overflow in space provided ---
 	
 */
 });
@@ -45,5 +47,9 @@ function newItem() {
 }
 function addItem() {
 	var itemnew = $('.new-item').val();
-	$('.list').prepend('<p>' + itemnew + '</p>').fadeIn('slow');
+	$('.list').prepend('<p>' + itemnew + '</p>').animate({
+		opacity: 1
+	}, {
+		duration: 2000,
+		queue: false});
 }
