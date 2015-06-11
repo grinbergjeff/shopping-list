@@ -47,9 +47,11 @@ function newItem() {
 }
 function addItem() {
 	var itemnew = $('.new-item').val();
-	$('.list').prepend('<p>' + itemnew + '</p>').animate({
+	$('.list').prepend('<p class="top-list">' + itemnew + '</p>');
+	$('.top-list').css("opacity", "0").animate({
 		opacity: 1
 	}, {
-		duration: 2000,
-		queue: false});
+		duration: 'slow',
+		queue: false}).removeClass(); //Only new items fade in.
+	
 }
