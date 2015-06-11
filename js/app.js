@@ -26,11 +26,15 @@ $(document).ready(function() {
 	list inside of the .list class will become empty.
 	
 --- Consider incorporating menu on side ---
-	Research sidr.
+	Allow user to reset/add new item by using the side menu
 	
 --- Incorporate pushing the footer down as the list expands ---
 
 --- Address item name overflow in space provided ---
+
+--- Consider implementing some kind of sharing capability ---
+
+--- Make sure reload never occurs due to possible list reset --
 	
 */
 });
