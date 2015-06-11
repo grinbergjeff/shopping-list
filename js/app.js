@@ -29,7 +29,6 @@ $(document).ready(function() {
 	
 */
 });
-
 function newItem() {
 	$('.new-item').keyDown(function(ent) {
 		if (ent.which == 13) {
@@ -38,4 +37,7 @@ function newItem() {
 		}
 	});
 });
-
+function addItem() {
+	var itemnew = $('.new-item').val();
+	$('.list').prepend('<p> itemnew </p>');
+}
