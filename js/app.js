@@ -1,5 +1,9 @@
 $(document).ready(function() {
+<<<<<<< HEAD
 newItem();
+=======
+
+>>>>>>> 9757ace1efe119b7c1f297e3b0eb95887307a581
 /*
 --- Insert Enter Button to input new paragraph (item) ---
 	When Enter button is pressed down inside of
@@ -30,14 +34,23 @@ newItem();
 */
 });
 function newItem() {
+<<<<<<< HEAD
 	$('.new-item').keydown(function(ent) {
 		if (ent.which == 13) {
 			console.log('Enter key is hit!');
+=======
+	$('.new-item').keyDown(function(ent) {
+		if (ent.which == 13) {
+>>>>>>> 9757ace1efe119b7c1f297e3b0eb95887307a581
 			//Add new item to the list
 			addItem();
 		}
 	});
+<<<<<<< HEAD
 }
+=======
+});
+>>>>>>> 9757ace1efe119b7c1f297e3b0eb95887307a581
 function addItem() {
 	var itemnew = $('.new-item').val();
 	$('.list').prepend('<p> itemnew </p>');
