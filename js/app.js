@@ -1,5 +1,6 @@
 $(document).ready(function() {
-newItem();
+	newItem();
+	reset();
 /*
 *DONE* Insert Enter Button to input new paragraph (item) *DONE*
 	When Enter button is pressed down inside of
@@ -36,12 +37,10 @@ newItem();
 function newItem() {
 	$('.new-item').keydown(function(ent) {
 		if (ent.which == 13) {
-			console.log('Enter key is hit!');
 			//Add new item to the list
 			addItem();
 			//Reset input field back to placeholder
 			$(this).val('');
-			
 		}
 	});
 }
@@ -57,5 +56,10 @@ function addItem() {
 	}, {
 		duration: 'slow',
 		queue: false}).removeClass(); //Only new items fade in.
-	
+}
+function reset() {
+	$('#reset-list').mousedown(function() {
+		alert('mousedown worked');
+		var confirmation = jconfirm('Are you sure you want to reset this list?');
+	})
 }
