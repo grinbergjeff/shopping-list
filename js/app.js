@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+newItem();
 /*
 --- Insert Enter Button to input new paragraph (item) ---
 	When Enter button is pressed down inside of
@@ -30,13 +30,14 @@ $(document).ready(function() {
 */
 });
 function newItem() {
-	$('.new-item').keyDown(function(ent) {
+	$('.new-item').keydown(function(ent) {
 		if (ent.which == 13) {
+			console.log('Enter key is hit!');
 			//Add new item to the list
 			addItem();
 		}
 	});
-});
+}
 function addItem() {
 	var itemnew = $('.new-item').val();
 	$('.list').prepend('<p> itemnew </p>');
