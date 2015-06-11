@@ -1,12 +1,12 @@
 $(document).ready(function() {
 newItem();
 /*
---- Insert Enter Button to input new paragraph (item) ---
+*DONE* Insert Enter Button to input new paragraph (item) *DONE*
 	When Enter button is pressed down inside of
 	the .new-item div, take that item value and
-	ADD it to the top of the list.
+	ADD it to the top of the list. 
 	
---- Figure out how to add new items to list div ---
+*DONE* Figure out how to add new items to list div *DONE*
 	When addItem() is called, it will take the value in the
 	.new-item div and paste the value to a new <p></p> tag 
 	for the .list div. The new value will be added to the 
