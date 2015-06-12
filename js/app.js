@@ -20,6 +20,8 @@ $(document).ready(function() {
 	When the #reset-button is clicked, (pressDown), the entire
 	list inside of the .list class will become empty.
 	
+*DONE* Make sure reload never occurs due to possible list reset *DONE*
+	
 --- Figure out how to add strikethrough/delete icons ---
 	addItem() will also need to add a button to each side
 	of the new item that is listed.
@@ -44,11 +46,13 @@ $(document).ready(function() {
 
 --- Consider implementing some kind of sharing capability ---
 
---- Make sure reload never occurs due to possible list reset --
-
 --- Implement Search Functionality ---
 */
 });
+// If a reload is attempted, users will be warned of losing their list.
+window.onbeforeunload = function(e) {
+  return 'If you reload, you will lose your shopping list.';
+};
 // Function allows users to add a new item via input bar + enter key
 function newItem() {
 	$('.new-item').keydown(function(ent) {
