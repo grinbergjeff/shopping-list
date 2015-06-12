@@ -25,6 +25,8 @@ $(document).ready(function() {
 
 *Done* Consider incorporating menu on side *Done*
 	Allow user to reset/add new item by using the side menu
+
+*Done* Implement Search Functionality *Done*
 	
 --- Figure out how to add strikethrough/delete icons ---
 	addItem() will also need to add a button to each side
@@ -45,8 +47,6 @@ $(document).ready(function() {
 --- Address item name overflow in space provided ---
 
 --- Consider implementing some kind of sharing capability ---
-
-*Done* Implement Search Functionality *Done*
 */
 });
 // If a reload is attempted, users will be warned of losing their list.
