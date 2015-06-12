@@ -23,10 +23,12 @@ $(document).ready(function() {
 	
 *DONE* Make sure reload never occurs due to possible list reset *DONE*
 
-*Done* Consider incorporating menu on side *Done*
+*DONE* Consider incorporating menu on side *DONE*
 	Allow user to reset/add new item by using the side menu
 
-*Done* Implement Search Functionality *Done*
+*DONE* Implement Search Functionality *DONE*
+
+*DONE* Kill ability to write tags for simple cross site attacks *DONE* 
 	
 --- Figure out how to add strikethrough/delete icons ---
 	addItem() will also need to add a button to each side
@@ -35,7 +37,7 @@ $(document).ready(function() {
 	--> Develop the functionality of the X and Check button
 	on each side. 
 	
---- Kill ability to write tags for simple cross site attacks --- 
+
 	
 --- Incorporate pushing the footer down as the list expands ---
 	Set a miniumum height for the middle section,
@@ -46,7 +48,8 @@ $(document).ready(function() {
 	
 --- Address item name overflow in space provided ---
 
---- Consider implementing some kind of sharing capability ---
+--- Consider implementing some kind of sharing capability ---   
+	Since I don't have access to servers, what if I could 	save the html file and email the folder as a link?
 */
 });
 // If a reload is attempted, users will be warned of losing their list.
@@ -80,6 +83,7 @@ function animateAdd(itemname) {
 // Function takes the value inputted and makes it into a new item	
 function addItem() {
 	var itemnew = $('.new-item').val();
+	itemnew = escapeHtml(itemnew);
 	if (itemnew != '') {animateAdd(itemnew)} 
 }
 //Function allows user to completely reset the list
@@ -100,6 +104,7 @@ function reset() {
 function menuAddItem() {
 	$('.new-item-menu').mousedown(function() {
 	var menuitem = prompt("What would you like to add to the list?");
+			menuitem = escapeHtml(menuitem);
 		if (menuitem != '' || menu != null) {animateAdd(menuitem)} 
 	});
 }
@@ -117,9 +122,18 @@ function searchList() {
 		}
 	})
 		})
-	//If empty, announce that you could not find it.
+	//If empty, consider asking if user wants to add it
 }
-
+//Speedbump the ability to incorporate tags inside input
+//Sourced from CodeDisqus.
+function escapeHtml(text) {
+  return text
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
+}
 
 
 
