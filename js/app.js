@@ -124,6 +124,15 @@ function searchList() {
 		})
 	//If empty, consider asking if user wants to add it
 }
+//Function to strikethrough
+function strike() {
+	
+}
+//Function to delete the row
+function deleteitem() {
+	
+}
+
 //Speedbump the ability to incorporate tags inside input
 //Sourced from CodeDisqus.
 function escapeHtml(text) {
