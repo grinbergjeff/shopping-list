@@ -16,6 +16,10 @@ $(document).ready(function() {
 	top of the .list div and push the rest of the values
 	down.
 	
+*DONE* Incorporate full reset code *DONE*
+	When the #reset-button is clicked, (pressDown), the entire
+	list inside of the .list class will become empty.
+	
 --- Figure out how to add strikethrough/delete icons ---
 	addItem() will also need to add a button to each side
 	of the new item that is listed.
@@ -23,9 +27,8 @@ $(document).ready(function() {
 	--> Develop the functionality of the X and Check button
 	on each side. 
 	
-*DONE* Incorporate full reset code *DONE*
-	When the #reset-button is clicked, (pressDown), the entire
-	list inside of the .list class will become empty.
+--- Kill ability to write tags for simple cross site attacks --- 
+
 	
 --- Consider incorporating menu on side ---
 	Allow user to reset/add new item by using the side menu
@@ -44,7 +47,6 @@ $(document).ready(function() {
 --- Make sure reload never occurs due to possible list reset --
 
 --- Implement Search Functionality ---
-	
 */
 });
 function newItem() {
@@ -57,10 +59,8 @@ function newItem() {
 		}
 	});
 }
-function addItem() {
-	var itemnew = $('.new-item').val();
-	if (itemnew != '') {
-	$('.list').prepend('<p class="top-list">' + itemnew + '</p>');
+function animateAdd(itemname) {
+	$('.list').prepend('<p class="top-list">' + itemname + '</p>');
 	$('.top-list').css({
 		"opacity": "0",
 		"margin-top": "-20px"
@@ -69,7 +69,12 @@ function addItem() {
 		marginTop: "10px",
 	}, {
 		duration: 'slow',
-		queue: false}).removeClass();} //Only new items fade in.
+		queue: false}).removeClass(); //Only new items fade in.
+}
+	
+function addItem() {
+	var itemnew = $('.new-item').val();
+	if (itemnew != '') {animateAdd(itemnew)} 
 }
 function reset() {
 	$('.reset-list').mousedown(function() {
@@ -85,9 +90,9 @@ function reset() {
 	})
 }
 function menuAddItem() {
-	$('.new-item-new').mousedown(function() {
-		var menuitem = prompt('What would you like to add to your list?');
-		addItem();
-	})
+	$('.new-item-menu').mousedown(function() {
+	var menuitem = prompt("What would you like to add to the list?");
+		if (menuitem != '') {animateAdd(menuitem)} 
+	});
 }
 		
