@@ -73,19 +73,19 @@ function animateAdd(itemname) {
 		duration: 'slow',
 		queue: false}).removeClass(); //Only new items fade in.
 }
-//Function Below creates a string of spaces. Used to check with inputs.
+/*//Function Below creates a string of spaces. Used to check with inputs.
 function spacebarSentence() {
 	var spacebarstring = '';
 	for (var i=0; i < 100; i++) {
 		spacebarstring + ' ';
 		return spacebarstring;
 	}
-}
+}*/
 
 // Function takes the value inputted and makes it into a new item	
 function addItem() {
 	var itemnew = $('.new-item').val();
-	if (itemnew != '' || itemnew != spacebarSentence()) {animateAdd(itemnew)} 
+	if (itemnew != '') {animateAdd(itemnew)} 
 }
 //Function allows user to completely reset the list
 function reset() {
@@ -105,7 +105,7 @@ function reset() {
 function menuAddItem() {
 	$('.new-item-menu').mousedown(function() {
 	var menuitem = prompt("What would you like to add to the list?");
-		if (menuitem != '' || menu != null || menuitem != spacebarSentence() ) {animateAdd(menuitem)} 
+		if (menuitem != '' || menu != null) {animateAdd(menuitem)} 
 	});
 }
 		
