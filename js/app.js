@@ -3,6 +3,7 @@ $(document).ready(function() {
 	newItem();
 	reset();
 	menuAddItem();
+	searchList();
 /*
 *DONE* Insert Enter Button to input new paragraph (item) *DONE*
 	When Enter button is pressed down inside of
@@ -21,6 +22,9 @@ $(document).ready(function() {
 	list inside of the .list class will become empty.
 	
 *DONE* Make sure reload never occurs due to possible list reset *DONE*
+
+*Done* Consider incorporating menu on side *Done*
+	Allow user to reset/add new item by using the side menu
 	
 --- Figure out how to add strikethrough/delete icons ---
 	addItem() will also need to add a button to each side
@@ -30,10 +34,6 @@ $(document).ready(function() {
 	on each side. 
 	
 --- Kill ability to write tags for simple cross site attacks --- 
-
-	
---- Consider incorporating menu on side ---
-	Allow user to reset/add new item by using the side menu
 	
 --- Incorporate pushing the footer down as the list expands ---
 	Set a miniumum height for the middle section,
@@ -46,7 +46,7 @@ $(document).ready(function() {
 
 --- Consider implementing some kind of sharing capability ---
 
---- Implement Search Functionality ---
+*Done* Implement Search Functionality *Done*
 */
 });
 // If a reload is attempted, users will be warned of losing their list.
@@ -77,15 +77,6 @@ function animateAdd(itemname) {
 		duration: 'slow',
 		queue: false}).removeClass(); //Only new items fade in.
 }
-/*//Function Below creates a string of spaces. Used to check with inputs.
-function spacebarSentence() {
-	var spacebarstring = '';
-	for (var i=0; i < 100; i++) {
-		spacebarstring + ' ';
-		return spacebarstring;
-	}
-}*/
-
 // Function takes the value inputted and makes it into a new item	
 function addItem() {
 	var itemnew = $('.new-item').val();
@@ -112,4 +103,32 @@ function menuAddItem() {
 		if (menuitem != '' || menu != null) {animateAdd(menuitem)} 
 	});
 }
+//Function allows user to search their list
+/* Sourced from: http://www.designchemical.com/blog/index.php/jquery/live-text-search-function-using-jquery/ */
+function searchList() {
+	$('.search').mousedown(function() {
+	var lookforitem = prompt("What would you like to look for in your list?");
+	$('.list p').each(function(){
+		if ($(this).text().search(new RegExp(lookforitem, "i")) < 0) {
+			$(this).fadeOut();
+		}
+		else {
+			$(this).show();
+		}
+	})
+		})
+	//If empty, announce that you could not find it.
+}
+
+
+
+
+/*//Function Below creates a string of spaces. Used to check with inputs.
+function spacebarSentence() {
+	var spacebarstring = '';
+	for (var i=0; i < 100; i++) {
+		spacebarstring + ' ';
+		return spacebarstring;
+	}
+}*/
 		
