@@ -61,7 +61,7 @@ i {
 }
 /*Middle Section*/
 .middle {
-	height: 600px;
+	height: 100%;
 	background-color: #F5F5F5;
 }
 .middle #reset-button {
@@ -129,9 +129,12 @@ i {
 	right: 0;
 	top: 45%;
 }
-
+#container { /*Push footer down.*/
+	padding-bottom: 25px;
+	background-color: #F5F5F5;
+}
 /*Footer Section*/
 .footer {
-	height: 200px;
+	height: 150px;
 	background-color: #C3D7DF;
 }

@@ -29,6 +29,8 @@ $(document).ready(function() {
 *DONE* Implement Search Functionality *DONE*
 
 *DONE* Kill ability to write tags for simple cross site attacks *DONE* 
+
+*DONE* Incorporate pushing the footer down as the list expands *DONE*
 	
 --- Figure out how to add strikethrough/delete icons ---
 	addItem() will also need to add a button to each side
@@ -36,15 +38,6 @@ $(document).ready(function() {
 	|
 	--> Develop the functionality of the X and Check button
 	on each side. 
-	
-
-	
---- Incorporate pushing the footer down as the list expands ---
-	Set a miniumum height for the middle section,
-	calculate the current height of the middle section,
-	if it is higher than the minimum, push the footer down.
-	Then set the minimum height to current value.
-	
 	
 --- Address item name overflow in space provided ---
 
@@ -132,7 +125,6 @@ function strike() {
 function deleteitem() {
 	
 }
-
 //Speedbump the ability to incorporate tags inside input
 //Sourced from CodeDisqus.
 function escapeHtml(text) {
@@ -143,15 +135,4 @@ function escapeHtml(text) {
       .replace(/"/g, "&quot;")
       .replace(/'/g, "&#039;");
 }
-
-
-
-/*//Function Below creates a string of spaces. Used to check with inputs.
-function spacebarSentence() {
-	var spacebarstring = '';
-	for (var i=0; i < 100; i++) {
-		spacebarstring + ' ';
-		return spacebarstring;
-	}
-}*/
 		
