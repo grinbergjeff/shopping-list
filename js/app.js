@@ -1,6 +1,8 @@
 $(document).ready(function() {
+	$('#simple-menu').sidr();
 	newItem();
 	reset();
+	menuAddItem();
 /*
 *DONE* Insert Enter Button to input new paragraph (item) *DONE*
 	When Enter button is pressed down inside of
@@ -29,12 +31,19 @@ $(document).ready(function() {
 	Allow user to reset/add new item by using the side menu
 	
 --- Incorporate pushing the footer down as the list expands ---
-
+	Set a miniumum height for the middle section,
+	calculate the current height of the middle section,
+	if it is higher than the minimum, push the footer down.
+	Then set the minimum height to current value.
+	
+	
 --- Address item name overflow in space provided ---
 
 --- Consider implementing some kind of sharing capability ---
 
 --- Make sure reload never occurs due to possible list reset --
+
+--- Implement Search Functionality ---
 	
 */
 });
@@ -63,7 +72,7 @@ function addItem() {
 		queue: false}).removeClass();} //Only new items fade in.
 }
 function reset() {
-	$('#reset-list').mousedown(function() {
+	$('.reset-list').mousedown(function() {
 		//Consider jQuery.confirm
 		if(confirm('If you click OK, your list will reset')) {
 			$('.list').fadeOut("medium", function() {
@@ -75,3 +84,10 @@ function reset() {
 		}
 	})
 }
+function menuAddItem() {
+	$('.new-item-new').mousedown(function() {
+		var menuitem = prompt('What would you like to add to your list?');
+		addItem();
+	})
+}
+		

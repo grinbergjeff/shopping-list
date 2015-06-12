@@ -11,7 +11,7 @@
 		<!-- Font-Awesome 4.3.0 *THANK YOU!*-->
 		<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
 		<!-- Sidr from Alberto Varela *Thank You!*-->
-		<link rel="stylesheet" href="css/jquery.sidr.light.css">
+		<link rel="stylesheet" href="css/jquery.sidr.dark.css">
 		<!--Google Font -->
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 	<!-- My JQuery Insert -->
@@ -21,6 +21,17 @@
 	<script src="js/jquery.sidr.min.js"></script>
 </head>
 <body>
+	<!-- Sidr Menu -->
+	<a id="simple-menu" href="#sidr"><i class="fa fa-bars fa-3x"></i><p>Menu</p></a>
+	<div id="sidr">
+  	<ul>
+   		<li class="new-item-menu">New Item</li>
+    	<li class="reset-list">Reset</li>
+    		<li div="search">Search</li>
+    		<li>Share</li>
+  	</ul>
+	</div>
+	<!-- End Sidr Menu -->
 	<!-- Start Header Section -->
 	<section class = "header">
 		<div class= "header-info">
@@ -32,7 +43,7 @@
 	<!-- Start Middle Section -->
 	<section class="middle">
 		<div id="reset-button">
-		<button name="reset-list" id="reset-list">Reset</button>
+		<button name="reset-list" class="reset-list">Reset</button>
 		</div>
 		<div class="add-item">
 			<input class="new-item" type="text" name="new-item" placeholder=" Add a new item here... then press enter"/>
@@ -44,9 +55,6 @@
 				<p class="strikethrough">Item 4</p>
 				<p class="strikethrough">Item 5</p>
 		</div>
-		<div id="reset-button">
-		<button name="reset-list" id="reset-list">Reset</button>
-		</div>
 	</section>
 	<!-- End of Middle Section -->
 	<!-- Start of Footer -->
@@ -54,5 +62,6 @@
 		<div class="footer-content">
 		</div>
 	</section>
+	<!-- End of Footer Section -->
 </body>
 </html>

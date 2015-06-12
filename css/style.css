@@ -5,6 +5,33 @@
 	font-family: 'Open Sans', sans-serif;
 	-webkit-font-smoothing: antialiased;
 }
+a {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+/*Menu Section*/
+#simple-menu {
+	color: #393939;
+	position: fixed;
+	z-index: 9999;
+	overflow: hidden;
+}
+i {
+	padding: 10px 0 0 5px;
+	
+}
+#simple-menu p{
+	margin: -5px 0 0 5px;
+}
+#sidr  li{
+ padding-left: 13px;	
+}
+#sidr li:hover {
+	cursor: pointer;
+}
+
 /*Header Section*/
 .header {
 	height: 270px;
@@ -41,7 +68,7 @@
 	padding-top: 20px;
 	text-align: center;
 }
-.middle #reset-list {
+.middle .reset-list {
 	width: 100px;
 	height: 30px;
 	border-radius: 9px;
