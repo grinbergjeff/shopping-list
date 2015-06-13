@@ -1,5 +1,4 @@
 $(document).ready(function() {
-	$('#simple-menu').sidr();
 	newItem();
 	searchitem();
 	reset();
@@ -167,5 +166,4 @@ function searchitem() {
 		})
 		}
 		})
-	//If empty, consider asking if user wants to add it
 }

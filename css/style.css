@@ -1,7 +1,6 @@
 <!-- Stylesheet by Jeffrey Grinberg -->
 
 .body {
-	background-color: #C3D7DF;
 	font-family: 'Open Sans', sans-serif;
 	-webkit-font-smoothing: antialiased;
 }
@@ -11,31 +10,10 @@ a {
 a:visited {
 	text-decoration: none;
 }
-/*Menu Section*/
-#simple-menu {
-	color: #393939;
-	position: fixed;
-	z-index: 9999;
-	overflow: hidden;
-}
-i {
-	padding: 10px 0 0 5px;
-	
-}
-#simple-menu p{
-	margin: -5px 0 0 5px;
-}
-#sidr  li{
- padding-left: 13px;	
-}
-#sidr li:hover {
-	cursor: pointer;
-}
-
 /*Header Section*/
 .header {
 	height: 270px;
-	background-color: #6991AC;
+	/*background-color: #6991AC;*/
 	font-family: 'Open Sans', sans-serif;
 }
 .header .header-info {
@@ -62,7 +40,6 @@ i {
 /*Middle Section*/
 .middle {
 	height: 100%;
-	background-color: #F5F5F5;
 }
 .middle #reset-button {
 	padding-top: 20px;
@@ -72,7 +49,7 @@ i {
 	width: 100px;
 	height: 30px;
 	border-radius: 9px;
-	border: 2px solid #D75C37;
+	border: 2px solid #F5F5F5;
 	background-color: #D75C37;
 	color: white;
 }
@@ -153,11 +130,9 @@ i {
 }
 #container { /*Push footer down.*/
 	padding-bottom: 25px;
-	background-color: #F5F5F5;
 }
 /*Footer Section*/
 .footer {
 	height: 200px;
-	background-color: #C3D7DF;
 	bottom: 0;
 }
