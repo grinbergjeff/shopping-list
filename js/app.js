@@ -34,10 +34,6 @@ $(document).ready(function() {
 *DONE* Figure out how to add strikethrough/delete icons *DONE*
 
 *DONE* Buttons should be working but are not *DONE*
-	|
-	|
-	 --> It probably is stuck running all of the buttons,
-	 make sure it reaches only one. Find function like that identifies where I am working exactly....nearby or closest.
 
 *DONE* Undo button is stuck *DONE*
 
