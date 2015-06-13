@@ -122,6 +122,7 @@ i {
 	float: left;
 	margin: 5px 0 0 8px;
 	background-image: url(../images/timessvg.svg);
+	background-size: contain;
 	height: 20px;
 	width: 20px;
 	z-index: 2;
@@ -130,6 +131,7 @@ i {
 	float: right;
 	margin: 5px 8px 0 0;
 	background-image: url(../images/checksvg.svg);
+	background-size: contain;
 	height: 20px;
 	width: 20px;
 	z-index: 2;
