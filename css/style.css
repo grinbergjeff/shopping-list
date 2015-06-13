@@ -41,6 +41,10 @@ a:visited {
 .middle {
 	height: 100%;
 }
+.middle ul li {
+	list-style: none;
+	display: inline;
+}
 .middle #reset-button {
 	padding-top: 20px;
 	text-align: center;
@@ -50,21 +54,18 @@ a:visited {
 	height: 30px;
 	border-radius: 9px;
 	border: 2px solid #F5F5F5;
-	background-color: #D75C37;
+	background-color: transparent;
 	color: white;
-}
-.middle .add-item {
-	text-align: center;
-	padding-top: 30px;
 }
 .middle input {
-	width: 80%;
-	height: 30px;
+	width: 40%;
+	height: 23px;
 	text-align: center;
 	border-radius: 9px;
-	border: 2px solid #555252;
-	background-color: #555252;
+	border: 2px solid #F5F5F5;
+	background-color: transparent;
 	color: white;
+	margin-right: 2rem; 
 }
 ::-webkit-input-placeholder {
    color: white;
@@ -111,8 +112,8 @@ a:visited {
 	cursor: pointer;
 }
 .nostrike {
-	border: 2px solid #67727A;
-	background-color: #67727A;
+	border: 2px solid #F5F5F5;
+	background-color: transparent;
 }
 .undoicon {
 	float: right;
@@ -130,9 +131,4 @@ a:visited {
 }
 #container { /*Push footer down.*/
 	padding-bottom: 25px;
-}
-/*Footer Section*/
-.footer {
-	height: 200px;
-	bottom: 0;
 }
