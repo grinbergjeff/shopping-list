@@ -105,6 +105,11 @@ i {
 	text-align: center;
 	padding-top: 15px;
 }
+.strikethrough {
+	background-color: #bdd879;
+	border: 2px solid #bdd879;
+	text-decoration': line-through;
+}
 .middle .list p {
 	display: inline-block;
 	text-align: center;
@@ -116,7 +121,6 @@ i {
 	background-color: #67727A;
 	line-height: 25pt;
 	color: white;
-	z-index: 1;
 }
 .deleteicon {
 	float: left;
@@ -125,7 +129,7 @@ i {
 	background-size: contain;
 	height: 20px;
 	width: 20px;
-	z-index: 2;
+	cursor: pointer;
 }
 .checkicon {
 	float: right;
@@ -134,24 +138,11 @@ i {
 	background-size: contain;
 	height: 20px;
 	width: 20px;
-	z-index: 2;
-}
-.strikethrough {
-	position: relative;
-	display: inline-block;
-}
-.strikethrough::after {
-	border-bottom: 3px solid white;
-	content: "";
-	left: 0;
-	position: absolute;
-	right: 0;
-	top: 45%;
+	cursor: pointer;
 }
 #container { /*Push footer down.*/
 	padding-bottom: 25px;
 	background-color: #F5F5F5;
-	z-index: 1;
 }
 /*Footer Section*/
 .footer {

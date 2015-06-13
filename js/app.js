@@ -4,6 +4,7 @@ $(document).ready(function() {
 	reset();
 	menuAddItem();
 	searchList();
+	strike();
 /*
 *DONE* Insert Enter Button to input new paragraph (item) *DONE*
 	When Enter button is pressed down inside of
@@ -22,14 +23,10 @@ $(document).ready(function() {
 	list inside of the .list class will become empty.
 	
 *DONE* Make sure reload never occurs due to possible list reset *DONE*
-
 *DONE* Consider incorporating menu on side *DONE*
 	Allow user to reset/add new item by using the side menu
-
 *DONE* Implement Search Functionality *DONE*
-
 *DONE* Kill ability to write tags for simple cross site attacks *DONE* 
-
 *DONE* Incorporate pushing the footer down as the list expands *DONE*
 	
 --- Figure out how to add strikethrough/delete icons ---
@@ -40,7 +37,6 @@ $(document).ready(function() {
 	on each side. 
 	
 --- Address item name overflow in space provided ---
-
 --- Consider implementing some kind of sharing capability ---   
 	Since I don't have access to servers, what if I could 	save the html file and email the folder as a link?
 */
@@ -121,7 +117,20 @@ function searchList() {
 }
 //Function to strikethrough
 function strike() {
-	
+	$('.checkicon').mousedown(function() {
+		if ($(this).parent().hasClass('strikethrough')) {
+			$(this).parent().removeClass('strikethrough')/*.css({
+			'background-color': '#67727A',
+			'border': '2px solid #67727A',
+			'text-decoration': 'none'})*/;
+		}
+		else {
+			$(this).parent().addClass('strikethrough')/*.css({
+			'background-color': '#bdd879',
+			'border': '2px solid #bdd879',
+			'text-decoration': 'line-through'})*/;
+		}
+		})
 }
 //Function to delete the row
 function deleteitem() {
@@ -137,4 +146,3 @@ function escapeHtml(text) {
       .replace(/"/g, "&quot;")
       .replace(/'/g, "&#039;");
 }
-		
