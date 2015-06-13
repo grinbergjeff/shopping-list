@@ -105,11 +105,6 @@ i {
 	text-align: center;
 	padding-top: 15px;
 }
-.strikethrough {
-	background-color: #bdd879;
-	border: 2px solid #bdd879;
-	text-decoration': line-through;
-}
 .middle .list p {
 	display: inline-block;
 	text-align: center;
@@ -117,8 +112,6 @@ i {
 	height: 30px;
 	margin-top: 10px;
 	border-radius: 9px;
-	border: 2px solid #67727A;
-	background-color: #67727A;
 	line-height: 25pt;
 	color: white;
 }
@@ -139,6 +132,15 @@ i {
 	height: 20px;
 	width: 20px;
 	cursor: pointer;
+}
+.nostrike {
+	border: 2px solid #67727A;
+	background-color: #67727A;
+}
+.strikethrough {
+	background-color: #bdd879;
+	border: 2px solid #bdd879;
+	text-decoration': line-through;
 }
 #container { /*Push footer down.*/
 	padding-bottom: 25px;

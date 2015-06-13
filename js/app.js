@@ -58,8 +58,8 @@ function newItem() {
 }
 // Function animates the new item to the list.
 function animateAdd(itemname) {
-	$('.list').prepend('<p class="top-list">' + itemname + '</p>');
-	$('.top-list').css({
+	$('.list').prepend('<p id="top-list" p class="nostrike">' + itemname + '</p>');
+	$('#top-list').css({
 		"opacity": "0",
 		"margin-top": "-20px"
 	}).animate({
@@ -67,7 +67,7 @@ function animateAdd(itemname) {
 		marginTop: "10px",
 	}, {
 		duration: 'slow',
-		queue: false}).removeClass(); //Only new items fade in.
+		queue: false}).removeAttr('id'); //Only new items fade in.
 }
 // Function takes the value inputted and makes it into a new item	
 function addItem() {
@@ -119,16 +119,10 @@ function searchList() {
 function strike() {
 	$('.checkicon').mousedown(function() {
 		if ($(this).parent().hasClass('strikethrough')) {
-			$(this).parent().removeClass('strikethrough')/*.css({
-			'background-color': '#67727A',
-			'border': '2px solid #67727A',
-			'text-decoration': 'none'})*/;
+			$(this).parent().removeClass('strikethrough');
 		}
 		else {
-			$(this).parent().addClass('strikethrough')/*.css({
-			'background-color': '#bdd879',
-			'border': '2px solid #bdd879',
-			'text-decoration': 'line-through'})*/;
+			$(this).parent().addClass('strikethrough');
 		}
 		})
 }
