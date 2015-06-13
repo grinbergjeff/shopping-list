@@ -5,6 +5,8 @@ $(document).ready(function() {
 	menuAddItem();
 	searchList();
 	strike();
+	undo();
+	deleteitem();
 /*
 *DONE* Insert Enter Button to input new paragraph (item) *DONE*
 	When Enter button is pressed down inside of
@@ -29,16 +31,15 @@ $(document).ready(function() {
 *DONE* Kill ability to write tags for simple cross site attacks *DONE* 
 *DONE* Incorporate pushing the footer down as the list expands *DONE*
 	
---- Figure out how to add strikethrough/delete icons ---
-	addItem() will also need to add a button to each side
-	of the new item that is listed.
-	|
-	--> Develop the functionality of the X and Check button
-	on each side. 
+*DONE* Figure out how to add strikethrough/delete icons *DONE*
+
+--- Buttons should be working but are not ---
+
+--- Undo button is stuck...---
+
+--- Really need to work on responsive design...mobile version sucks ---
 	
 --- Address item name overflow in space provided ---
---- Consider implementing some kind of sharing capability ---   
-	Since I don't have access to servers, what if I could 	save the html file and email the folder as a link?
 */
 });
 // If a reload is attempted, users will be warned of losing their list.
@@ -58,7 +59,7 @@ function newItem() {
 }
 // Function animates the new item to the list.
 function animateAdd(itemname) {
-	$('.list').prepend('<p id="top-list" p class="nostrike">' + itemname + '</p>');
+	$('.list').prepend('<p id="top-list" p class="nostrike"><span class="deleteicon"></span>' + itemname + '<span class="checkicon"></span></p>');
 	$('#top-list').css({
 		"opacity": "0",
 		"margin-top": "-20px"
@@ -67,7 +68,7 @@ function animateAdd(itemname) {
 		marginTop: "10px",
 	}, {
 		duration: 'slow',
-		queue: false}).removeAttr('id'); //Only new items fade in.
+		queue: false}).removeAttr('p id'); //Only new items fade in.
 }
 // Function takes the value inputted and makes it into a new item	
 function addItem() {
@@ -119,16 +120,26 @@ function searchList() {
 function strike() {
 	$('.checkicon').mousedown(function() {
 		if ($(this).parent().hasClass('strikethrough')) {
-			$(this).parent().removeClass('strikethrough');
+			$(this).parent().removeClass().addClass('nostrike');
 		}
 		else {
-			$(this).parent().addClass('strikethrough');
+			$(this).parent().addClass('strikethrough')
+			$(this).removeClass().addClass('undoicon');
 		}
 		})
 }
+//Function to undo
+function undo() {
+$('.undoicon').mousedown(function() {
+	$(this).parent().removeClass().addClass('nostrike');
+	$(this).removeClass().addClass('checkicon');
+});
+}
 //Function to delete the row
 function deleteitem() {
-	
+	$('.deleteicon').mousedown(function() {
+		$(this).parent().fadeOut("medium");
+})
 }
 //Speedbump the ability to incorporate tags inside input
 //Sourced from CodeDisqus.

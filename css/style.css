@@ -137,6 +137,15 @@ i {
 	border: 2px solid #67727A;
 	background-color: #67727A;
 }
+.undoicon {
+	float: right;
+	margin: 5px 8px 0 0;
+	background-image: url(../images/undosvg.svg);
+	background-size: contain;
+	height: 20px;
+	width: 20px;
+	cursor: pointer;
+}
 .strikethrough {
 	background-color: #bdd879;
 	border: 2px solid #bdd879;
