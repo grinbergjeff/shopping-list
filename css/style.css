@@ -1,7 +1,7 @@
 <!-- Stylesheet by Jeffrey Grinberg -->
 
 .body {
-	background-color: black;
+	background-color: #C3D7DF;
 	font-family: 'Open Sans', sans-serif;
 	-webkit-font-smoothing: antialiased;
 }
@@ -117,6 +117,20 @@ i {
 	line-height: 25pt;
 	color: white;
 }
+#deleteicon {
+	float: left;
+	margin: 5px 0 0 8px;
+	background-image: url(/images/timessvg.svg);
+	height: 20px;
+	width: 20px;
+}
+#checkicon {
+	float: right;
+	margin: 5px 8px 0 0;
+	background-image: url(/images/checksvg.svg);
+	height: 20px;
+	width: 20px;
+}
 .strikethrough {
 	position: relative;
 	display: inline-block;
@@ -135,6 +149,6 @@ i {
 }
 /*Footer Section*/
 .footer {
-	height: 150px;
+	height: 200px;
 	background-color: #C3D7DF;
 }

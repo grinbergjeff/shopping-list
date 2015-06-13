@@ -106,14 +106,16 @@ function menuAddItem() {
 function searchList() {
 	$('.search').mousedown(function() {
 	var lookforitem = prompt("What would you like to look for in your list?");
-	$('.list p').each(function(){
-		if ($(this).text().search(new RegExp(lookforitem, "i")) < 0) {
-			$(this).fadeOut();
+		if(lookforitem != null) {
+		$('.list p').each(function(){
+			if ($(this).text().search(new RegExp(lookforitem, "i")) < 0) {
+				$(this).fadeOut();
+			}
+			else {
+				$(this).show();
+			}
+		})
 		}
-		else {
-			$(this).show();
-		}
-	})
 		})
 	//If empty, consider asking if user wants to add it
 }
