@@ -10,6 +10,14 @@ a {
 a:visited {
 	text-decoration: none;
 }
+.fixed {
+	background-color: #2B2B2B;
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:2;
+	width:100%;	
+}
 /*Header Section*/
 .header {
 	height: 270px;

@@ -3,10 +3,10 @@ $(document).ready(function() {
 	searchitem();
 	reset();
 	menuAddItem();
-	searchList();
 	deleteitem();
 	strike();
 	undocheck();
+	lockmenu();
 /*
 *DONE* Insert Enter Button to input new paragraph (item) *DONE*
 	When Enter button is pressed down inside of
@@ -46,6 +46,14 @@ $(document).ready(function() {
 window.onbeforeunload = function(e) {
   return 'If you reload, you will lose your shopping list.';
 };
+//Allow menu to lock on top of browser on scroll down.
+$(window).scroll(function(){
+      if ($(this).scrollTop() > 135) {
+          $('#reset-button').addClass('fixed');
+      } else {
+          $('#reset-button').removeClass('fixed');
+      }
+  });
 // Function allows users to add a new item via input bar + enter key
 function newItem() {
 	$('.new-item').keydown(function(ent) {
@@ -101,24 +109,6 @@ function menuAddItem() {
 		if (menuitem != '' || menu != null) {animateAdd(menuitem)} 
 	});
 }
-//Function allows user to search their list
-/* Sourced from: http://www.designchemical.com/blog/index.php/jquery/live-text-search-function-using-jquery/ */
-function searchList() {
-	$('.search').mousedown(function() {
-	var lookforitem = prompt("What would you like to look for in your list?");
-		if(lookforitem != null) {
-		$('.list p').each(function(){
-			if ($(this).text().search(new RegExp(lookforitem, "i")) < 0) {
-				$(this).fadeOut();
-			}
-			else {
-				$(this).show();
-			}
-		})
-		}
-		})
-	//If empty, consider asking if user wants to add it
-}
 //Function to strikethrough
 function strike() {
 	$('.list').on('mousedown', '.checkicon', function() {
@@ -149,9 +139,8 @@ function escapeHtml(text) {
       .replace(/"/g, "&quot;")
       .replace(/'/g, "&#039;");
 }
-
-
-
+//Function allows user to search their list live
+/* Sourced from: http://www.designchemical.com/blog/index.php/jquery/live-text-search-function-using-jquery/ */
 function searchitem() {
 	$('.new-item').keyup(function() {
 	var searchforitem = $(this).val();
@@ -167,3 +156,4 @@ function searchitem() {
 		}
 		})
 }
+ 
