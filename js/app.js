@@ -5,7 +5,7 @@ $(document).ready(function() {
 	menuAddItem();
 	searchList();
 	strike();
-	undo();
+	undocheck();
 	deleteitem();
 /*
 *DONE* Insert Enter Button to input new paragraph (item) *DONE*
@@ -63,7 +63,10 @@ function newItem() {
 }
 // Function animates the new item to the list.
 function animateAdd(itemname) {
-	$('.list').prepend('<p id="top-list" p class="nostrike"><span class="deleteicon"></span>' + itemname + '<span class="checkicon"></span></p>');
+	var newitemgen = '<p id="top-list" p class="nostrike">';
+	var xspan = '<span class="deleteicon"></span>';
+	var checkspan = '<span class="checkicon"></span></p>';
+	$('.list').prepend(newitemgen + xspan + itemname + checkspan);
 	$('#top-list').css({
 		"opacity": "0",
 		"margin-top": "-20px"
@@ -123,21 +126,16 @@ function searchList() {
 //Function to strikethrough
 function strike() {
 	$('.checkicon').mousedown(function() {
-		if ($(this).parent().hasClass('strikethrough')) {
-			$(this).parent().removeClass().addClass('nostrike');
-		}
-		else {
-			$(this).parent().addClass('strikethrough')
-			$(this).removeClass().addClass('undoicon');
-		}
+				$(this).parent().removeClass().addClass('strikethrough');
+				$(this).removeClass().addClass('undoicon');
 		})
 }
-//Function to undo
-function undo() {
-$('.undoicon').mousedown(function() {
-	$(this).parent().removeClass().addClass('nostrike');
-	$(this).removeClass().addClass('checkicon');
-});
+//Function to undo checked off item
+function undocheck() {
+	$('.undoicon').mousedown(function() {
+		$(this).parent().removeClass().addClass('nostrike');
+		$(this).removeClass().addClass('checkicon');
+})
 }
 //Function to delete the row
 function deleteitem() {
