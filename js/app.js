@@ -4,9 +4,9 @@ $(document).ready(function() {
 	reset();
 	menuAddItem();
 	searchList();
+	deleteitem();
 	strike();
 	undocheck();
-	deleteitem();
 /*
 *DONE* Insert Enter Button to input new paragraph (item) *DONE*
 	When Enter button is pressed down inside of
@@ -33,13 +33,13 @@ $(document).ready(function() {
 	
 *DONE* Figure out how to add strikethrough/delete icons *DONE*
 
---- Buttons should be working but are not ---
+*DONE* Buttons should be working but are not *DONE*
 	|
 	|
 	 --> It probably is stuck running all of the buttons,
 	 make sure it reaches only one. Find function like that identifies where I am working exactly....nearby or closest.
 
---- Undo button is stuck...---
+*DONE* Undo button is stuck *DONE*
 
 --- Really need to work on responsive design...mobile version sucks ---
 	
@@ -125,21 +125,21 @@ function searchList() {
 }
 //Function to strikethrough
 function strike() {
-	$('.checkicon').mousedown(function() {
+	$('.list').on('mousedown', '.checkicon', function() {
 				$(this).parent().removeClass().addClass('strikethrough');
 				$(this).removeClass().addClass('undoicon');
 		})
 }
 //Function to undo checked off item
 function undocheck() {
-	$('.undoicon').mousedown(function() {
+	$('.list').on('mousedown', '.undoicon', function() {
 		$(this).parent().removeClass().addClass('nostrike');
 		$(this).removeClass().addClass('checkicon');
 })
 }
 //Function to delete the row
 function deleteitem() {
-	$('.deleteicon').mousedown(function() {
+	$('.list').on('mousedown', '.deleteicon', function() {
 		$(this).parent().fadeOut("medium");
 })
 }
