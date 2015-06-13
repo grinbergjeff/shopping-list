@@ -1,6 +1,7 @@
 $(document).ready(function() {
 	$('#simple-menu').sidr();
 	newItem();
+	searchitem();
 	reset();
 	menuAddItem();
 	searchList();
@@ -148,4 +149,23 @@ function escapeHtml(text) {
       .replace(/>/g, "&gt;")
       .replace(/"/g, "&quot;")
       .replace(/'/g, "&#039;");
+}
+
+
+
+function searchitem() {
+	$('.new-item').keyup(function() {
+	var searchforitem = $(this).val();
+		if(searchforitem != null) {
+		$('.list p').each(function(){
+			if ($(this).text().search(new RegExp(searchforitem, "i")) < 0) {
+				$(this).fadeOut();
+			}
+			else {
+				$(this).show();
+			}
+		})
+		}
+		})
+	//If empty, consider asking if user wants to add it
 }
