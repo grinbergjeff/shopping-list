@@ -135,3 +135,20 @@
 #container { /*Push footer down.*/
 	padding-bottom: 25px;
 }
+/*Make responsive*/
+
+@media all and (min-width: 320px) and (max-width: 780px) {
+	input[type='text'],
+	input[type='number'],
+	textarea {
+ 		 font-size: 16px;
+	}
+	
+	p {
+		height: 70px;
+	}
+	.deleteicon, .undoicon, .checkicon {
+		height: 50px;
+		width: 50px;
+	}
+}

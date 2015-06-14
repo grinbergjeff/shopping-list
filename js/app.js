@@ -38,6 +38,8 @@ $(document).ready(function() {
 *DONE* Undo button is stuck *DONE*
 
 --- Really need to work on responsive design...mobile version sucks ---
+	|--> Prevent autozoom when adding new item
+	|--> Increase height/text size/icon sizes
 */
 });
 // If a reload is attempted, users will be warned of losing their list.
@@ -154,4 +156,5 @@ function searchitem() {
 		}
 		})
 }
+
  
