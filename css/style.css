@@ -4,14 +4,8 @@
 	font-family: 'Open Sans', sans-serif;
 	-webkit-font-smoothing: antialiased;
 }
-a {
-	text-decoration: none;
-}
-a:visited {
-	text-decoration: none;
-}
 .fixed {
-	background-color: #2B2B2B;
+	background-color: #034660;
 	position:fixed;
 	top:0;
 	left:0;
@@ -133,8 +127,9 @@ a:visited {
 	cursor: pointer;
 }
 .strikethrough {
-	background-color: #bdd879;
-	border: 2px solid #bdd879;
+	color: #4A5674;
+	background-color: #2F9BA7;
+	border: 2px solid #2F9BA7;
 	text-decoration': line-through;
 }
 #container { /*Push footer down.*/

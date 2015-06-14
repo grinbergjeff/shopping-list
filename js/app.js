@@ -38,8 +38,6 @@ $(document).ready(function() {
 *DONE* Undo button is stuck *DONE*
 
 --- Really need to work on responsive design...mobile version sucks ---
-	
---- Address item name overflow in space provided ---
 */
 });
 // If a reload is attempted, users will be warned of losing their list.
