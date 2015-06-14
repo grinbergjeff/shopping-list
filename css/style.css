@@ -143,12 +143,25 @@
 	textarea {
  		 font-size: 16px;
 	}
-	
-	p {
-		height: 70px;
+#reset-button .new-item {
+		height: 50px;
+	}
+#reset-button .reset-list {
+	height: 56px;
+	}
+	.middle .list p {
+		height: 50px;
+		line-height: 40pt;
+		font-size: 20px;
 	}
 	.deleteicon, .undoicon, .checkicon {
 		height: 50px;
 		width: 50px;
 	}
+	.deleteicon {
+		margin:	1px 0 0 1px;
+	}
+	.undoicon, .checkicon {
+		margin: 1px 3px 0 0;
+	}	
 }
