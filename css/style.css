@@ -1,4 +1,7 @@
 <!-- Stylesheet by Jeffrey Grinberg -->
+.krCadetBlueDiagonal {
+	background:-moz-linear-gradient(45deg, #606c88 10%, #3f4c6b 90%);
+}
 
 .body {
 	font-family: 'Open Sans', sans-serif;
