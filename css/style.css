@@ -136,7 +136,9 @@
 }
 /*Make responsive*/
 
-@media (max-width: 870px)  {
+@media only screen
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
 	input[type='text'],
 	input[type='number'],
 	textarea {
@@ -166,4 +168,10 @@
 	.undoicon, .checkicon {
 		margin: 1px 3px 0 0;
 	}
+}
+body { 
+    transition:all .2s linear; 
+    -o-transition:all .2s linear; 
+    -moz-transition:all .2s linear; 
+    -webkit-transition:all .2s linear;
 }
