@@ -136,7 +136,7 @@
 }
 /*Make responsive*/
 
-@media all and (min-width: 320px) and (max-width: 780px) {
+@media (max-width: 500px)  {
 	input[type='text'],
 	input[type='number'],
 	textarea {
@@ -144,14 +144,17 @@
 	}
 #reset-button .new-item {
 		height: 50px;
+		width: 90%;
+		margin-bottom: 15px;
 	}
 #reset-button .reset-list {
 	height: 56px;
 	}
 	.middle .list p {
+		width: 100%;
 		height: 50px;
 		line-height: 40pt;
-		font-size: 20px;
+		font-size: 14px;
 	}
 	.deleteicon, .undoicon, .checkicon {
 		height: 50px;
@@ -162,5 +165,5 @@
 	}
 	.undoicon, .checkicon {
 		margin: 1px 3px 0 0;
-	}	
+	}
 }
