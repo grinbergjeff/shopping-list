@@ -136,7 +136,7 @@
 }
 /*Make responsive*/
 
-@media (max-width: 500px)  {
+@media (max-width: 860px)  {
 	input[type='text'],
 	input[type='number'],
 	textarea {
