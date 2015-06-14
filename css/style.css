@@ -1,6 +1,4 @@
 <!-- Stylesheet by Jeffrey Grinberg -->
-.krCadetBlueRight{background:-webkit-linear-gradient(left,#606c88 10%,#3f4c6b 90%);background:-o-linear-gradient(left,#606c88 10%,#3f4c6b 90%);background:linear-gradient(to right,#606c88 10%,#3f4c6b 90%);background:moz-linear-gradient(to right,#606c88 10%,#3f4c6b 90%)}
-
 .body {
 	font-family: 'Open Sans', sans-serif;
 	-webkit-font-smoothing: antialiased;
