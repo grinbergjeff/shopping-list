@@ -126,7 +126,7 @@ function undocheck() {
 //Function to delete the row
 function deleteitem() {
 	$('.list').on('mousedown', '.deleteicon', function() {
-		$(this).parent().fadeOut("medium");
+		$(this).parent().fadeOut(300,function() { $(this).remove(); });
 })
 }
 //Speedbump the ability to incorporate tags inside input
