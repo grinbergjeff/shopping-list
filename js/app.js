@@ -36,10 +36,6 @@ $(document).ready(function() {
 *DONE* Buttons should be working but are not *DONE*
 
 *DONE* Undo button is stuck *DONE*
-
---- Really need to work on responsive design...mobile version sucks ---
-	|--> Prevent autozoom when adding new item
-	|--> Increase height/text size/icon sizes
 */
 });
 // If a reload is attempted, users will be warned of losing their list.
@@ -48,7 +44,7 @@ window.onbeforeunload = function(e) {
 };
 //Allow menu to lock on top of browser on scroll down.
 $(window).scroll(function(){
-      if ($(this).scrollTop() > 135) {
+      if ($(this).scrollTop() > 25) {
           $('#reset-button').addClass('fixed');
       } else {
           $('#reset-button').removeClass('fixed');
