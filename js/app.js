@@ -7,36 +7,6 @@ $(document).ready(function() {
 	strike();
 	undocheck();
 	lockmenu();
-/*
-*DONE* Insert Enter Button to input new paragraph (item) *DONE*
-	When Enter button is pressed down inside of
-	the .new-item div, take that item value and
-	ADD it to the top of the list. 
-	
-*DONE* Figure out how to add new items to list div *DONE*
-	When addItem() is called, it will take the value in the
-	.new-item div and paste the value to a new <p></p> tag 
-	for the .list div. The new value will be added to the 
-	top of the .list div and push the rest of the values
-	down.
-	
-*DONE* Incorporate full reset code *DONE*
-	When the #reset-button is clicked, (pressDown), the entire
-	list inside of the .list class will become empty.
-	
-*DONE* Make sure reload never occurs due to possible list reset *DONE*
-*DONE* Consider incorporating menu on side *DONE*
-	Allow user to reset/add new item by using the side menu
-*DONE* Implement Search Functionality *DONE*
-*DONE* Kill ability to write tags for simple cross site attacks *DONE* 
-*DONE* Incorporate pushing the footer down as the list expands *DONE*
-	
-*DONE* Figure out how to add strikethrough/delete icons *DONE*
-
-*DONE* Buttons should be working but are not *DONE*
-
-*DONE* Undo button is stuck *DONE*
-*/
 });
 // If a reload is attempted, users will be warned of losing their list.
 window.onbeforeunload = function(e) {
